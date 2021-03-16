@@ -53,26 +53,26 @@ export const CircuitTable: React.FC = () => {
     const [dataTable, setDataTable] = useState<DataCircuitTable[]>([]);
 
     useEffect(() => {
-        fetchMyAPI();
+        fetchMyAPI().then((response) => {
+            setDataTable(
+                response.map((el) => {
+                    return {
+                        id: el.circuitId,
+                        circuitName: el.circuitName,
+                        locality: el.Location.locality,
+                        country: el.Location.country,
+                    };
+                }),
+            );
+        });
     }, []);
 
     const classes = useStyles();
 
-    async function fetchMyAPI() {
+    async function fetchMyAPI(): Promise<any> {
         const response = await fetch('https://ergast.com/api/f1/circuits.json');
         const data = await response.json();
-        const circuitsData = data.MRData.CircuitTable.Circuits;
-
-        setDataTable(
-            circuitsData.map((el) => {
-                return {
-                    id: el.circuitId,
-                    circuitName: el.circuitName,
-                    locality: el.Location.locality,
-                    country: el.Location.country,
-                };
-            }),
-        );
+        return data.MRData.CircuitTable.Circuits;
     }
 
     return (

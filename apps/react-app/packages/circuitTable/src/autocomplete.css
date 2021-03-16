@@ -24,3 +24,14 @@ ul {
     max-height: 200px;
     overflow-y: scroll;
 }
+
+li {
+    line-height: 20px;
+    font-size: 14px;
+}
+
+li:hover {
+    cursor: pointer;
+    background: #31334a;
+    border-radius: 3px;
+}
