@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-height: 100vh;
+}
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background: #202234;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    color: #d4d5d8;
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+    cursor: pointer;
+    color: #5965e7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a:visited {
+    color: #d4d5d8;
 }
 
-.App-link {
-  color: #61dafb;
+a:visited:hover {
+    color: #5965e7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+}
+
+.left-sidebar {
+    display: flex;
+    width: 15%;
+    background: #31334a;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.h1_main_content {
+    color: #d4d5d8;
+}
+
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active {
+    color: gold;
+    background: #fff;
+}
+
+.ant-table-row .ant-table-row-level-0 {
+    font-weight: bold;
+}
+
+.select_season {
+    display: flex;
+    color: #d4d5d8;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.select_season p {
+    margin-right: 15px;
+}
+
+.table_container {
+    width: 100%;
+}
+
+.first-page {
+    margin-top: 50px;
+    display: grid;
+    width: 90%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.first-page div {
+    height: 30vh;
+    border: 1px solid white;
+    font-size: 36px;
+    background: #202253;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-wrapper {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+
+.next-race {
+    display: flex;
+}
+
+.next-race > p:first-child {
+    margin-right: 7px;
 }

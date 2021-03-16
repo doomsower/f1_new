@@ -1,0 +1,11 @@
+.left_menu {
+    text-decoration: none;
+    list-style: none;
+    margin-bottom: 65px;
+}
+
+.left_menu li {
+    font-size: 18px;
+    padding-bottom: 8px;
+    color: #686a7b;
+}

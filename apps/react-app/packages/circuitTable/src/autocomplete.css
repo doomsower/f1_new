@@ -16,7 +16,7 @@
     padding-left: 5px;
 }
 
-ul {
+.autocomplete ul {
     width: 100%;
     list-style: none;
     padding: 5px;
@@ -25,9 +25,10 @@ ul {
     overflow-y: scroll;
 }
 
-li {
+.autocomplete li {
     line-height: 20px;
     font-size: 14px;
+    color: white;
 }
 
 li:hover {

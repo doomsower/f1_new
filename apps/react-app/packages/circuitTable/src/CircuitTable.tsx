@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { DataGrid, GridColDef } from '@material-ui/data-grid';
 import { makeStyles } from '@material-ui/core/styles';
 import { AutoComplete } from './Autocomplete';
+import './CircuitTable.css';
 
 const useStyles = makeStyles({
     root: {
@@ -76,7 +77,7 @@ export const CircuitTable: React.FC = () => {
     }
 
     return (
-        <div>
+        <div className="circuit-table">
             <AutoComplete curcuitName={dataTable.map((name) => name.circuitName)} />
             <div style={{ width: '50%' }}>
                 <DataGrid

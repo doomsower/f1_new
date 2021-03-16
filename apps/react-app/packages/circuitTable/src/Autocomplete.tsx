@@ -11,6 +11,8 @@ export const AutoComplete: React.FC<{ curcuitName: string[] }> = (props) => {
         setDisplay(false);
     };
 
+    let key = 0;
+
     const filter = (value: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(value.target.value);
     };
@@ -31,7 +33,12 @@ export const AutoComplete: React.FC<{ curcuitName: string[] }> = (props) => {
             {display && listResult.length > 0 && (
                 <ul className="autocomplete__list">
                     {listResult.map((name: string) => {
-                        return <li onClick={() => setInput(name)}>{name}</li>;
+                        return (
+                            // eslint-disable-next-line no-plusplus
+                            <li key={key++} onClick={() => setInput(name)}>
+                                {name}
+                            </li>
+                        );
                     })}
                 </ul>
             )}
